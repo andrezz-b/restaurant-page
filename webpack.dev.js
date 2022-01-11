@@ -12,6 +12,7 @@ module.exports = merge(common, {
 	devtool: "inline-source-map",
 	devServer: {
 		static: "./dist",
+		watchFiles: ["src/*.html"],
 		open: {
 			app: {
 				name: "google-chrome",
