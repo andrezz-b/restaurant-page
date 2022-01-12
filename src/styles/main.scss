@@ -1,19 +1,20 @@
 $fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
 @import "reset.css";
-@import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
-@import "~@fortawesome/fontawesome-free/scss/solid.scss";
-@import url("https://fonts.googleapis.com/css2?family=Crimson+Pro&display=swap");
+// @import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
+// @import "~@fortawesome/fontawesome-free/scss/solid.scss";
 // @import "~@fortawesome/fontawesome-free/scss/brands.scss";
 // @import "~@fortawesome/fontawesome-free/scss/regular.scss";
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Pro&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans&display=swap");
 
 $font-title: "Crimson Pro", serif;
+$font-text: "Work Sans", sans-serif;
 
 $clr-bg-dk: #222831;
 $clr-bg-lt: #f2f2f2;
 
 $clr-base: lighten(#f96d00, 15%);
 $clr-ntrl: #fff;
-
 
 @mixin flexCenter($direction: row) {
 	display: flex;
@@ -23,16 +24,22 @@ $clr-ntrl: #fff;
 }
 
 @mixin background-opacity($color, $opacity: 0.3) {
-    background: $color;
-    background: rgba($color, $opacity);
+	background: $color;
+	background: rgba($color, $opacity);
 }
 
 html {
-	background: url(../assets/images/bg-restaurant.jpg) no-repeat center center fixed; 
+	background: url(../assets/images/bg-restaurant.jpg) no-repeat center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
+}
+
+#content {
+	@include flexCenter(column);
+	justify-content: flex-start;
+	row-gap: 1rem;
 }
 
 nav {
@@ -43,8 +50,6 @@ nav {
 	border-bottom: 2px solid $clr-bg-dk;
 	width: 100%;
 	gap: 2rem;
-	// position: fixed;
-	// top: 0;
 
 
 	button {
@@ -69,4 +74,67 @@ nav {
 
 main {
 	@include flexCenter(column);
+	@include background-opacity($clr-bg-dk, 0.85);
+	border-radius: 3px;
+	width: 50%;
+	justify-content: center;
 }
+
+.highlight {
+	font-size: 1.3em;
+	color: $clr-base;
+	font-weight: 700;
+}
+
+.section {
+	@include flexCenter(column);
+	width: 50%;
+	margin: 1rem 0;
+}
+
+.title {
+	font-size: 2.5em;
+	color: $clr-ntrl;
+	border-bottom: 1px solid $clr-ntrl;
+}
+
+.container {
+	@include flexCenter(row);
+	padding: 1.5em;
+	width: 100%;
+	row-gap: 3rem;
+	margin: .5rem 0;
+
+	img {
+		border: 1px solid $clr-ntrl;
+		background-color: $clr-bg-lt;
+		border-radius: 4px;
+		padding: 0.1rem;
+	}
+
+	h1.title {
+		flex: 1 0 75%;
+		font-size: 2em;
+	}
+
+	img:first-child  {
+		margin-right: 6rem;
+		transform: rotate(1deg);
+	}
+
+	h1 + img {
+		margin-left: 6rem;
+		transform: rotate(-1deg);
+	}
+
+}
+
+.section--content {
+	row-gap: 1.2rem;
+
+	p {
+		font-family: $font-text;
+		color: $clr-bg-lt;
+	}
+}
+
