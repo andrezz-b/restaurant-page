@@ -29,11 +29,22 @@ $clr-ntrl: #fff;
 }
 
 html {
-	background: url(../assets/images/bg-restaurant.jpg) no-repeat center center fixed;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
+	position: relative;
+
+	&::before {
+		background-image: url('../assets/images/bg-restaurant.jpg');
+		background-repeat: no-repeat;
+		background-position: center top;
+		background-size: cover;
+		content: ' ';
+		height: 100%;
+		left: 0;
+		position: fixed;
+		top: 0;
+		width: 100%;
+		will-change: transform;
+		z-index: -1;
+	}
 }
 
 #content {
@@ -119,12 +130,10 @@ main {
 
 	img:first-child  {
 		margin-right: 6rem;
-		transform: rotate(1deg);
 	}
 
 	h1 + img {
 		margin-left: 6rem;
-		transform: rotate(-1deg);
 	}
 
 }
