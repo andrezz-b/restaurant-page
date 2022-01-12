@@ -89,6 +89,7 @@ main {
 	border-radius: 3px;
 	width: 50%;
 	justify-content: center;
+	padding: 2rem 0;
 }
 
 .highlight {
@@ -99,14 +100,16 @@ main {
 
 .section {
 	@include flexCenter(column);
+	row-gap: 1rem;
 	width: 50%;
-	margin: 1rem 0;
 }
 
 .title {
-	font-size: 2.5em;
+	font-size: 3em;
+	white-space: nowrap;
+	padding: .5rem;
 	color: $clr-ntrl;
-	border-bottom: 1px solid $clr-ntrl;
+	border-bottom: 1px solid $clr-base;
 }
 
 .container {
@@ -124,8 +127,10 @@ main {
 	}
 
 	h1.title {
+		white-space: normal;
 		flex: 1 0 75%;
 		font-size: 2em;
+		padding: .5em;
 	}
 
 	img:first-child  {
@@ -138,12 +143,9 @@ main {
 
 }
 
-.section--content {
-	row-gap: 1.2rem;
-
-	p {
-		font-family: $font-text;
-		color: $clr-bg-lt;
-	}
+.par-large {
+	font-family: $font-text;
+	font-size: 1.2em;
+	color: $clr-bg-lt;
 }
 
