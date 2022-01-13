@@ -1,0 +1,41 @@
+@import "mixins";
+@import "variables";
+
+.section.section--menu {
+    width: 100%;
+}
+
+.menu-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    padding: 1rem;
+    gap: 1rem;
+}
+
+
+.menu-item {
+    @include flexCenter(column);
+    padding: 1.5rem;
+
+    img {
+        width:  100%;
+        height: auto;
+        object-fit: cover;
+        border: 1px solid $clr-ntrl;
+		background-color: $clr-bg-lt;
+		border-radius: 4px;
+		padding: 0.1rem;
+    }
+
+    .wrapper {
+        @include flexCenter(row);
+        padding: .5em;
+        margin-top: .7rem;
+        width: 100%;
+        justify-content: space-between;
+        font-family: $font-text;
+        color: $clr-bg-lt;
+        border-top: 1px solid $clr-base;
+    }
+}

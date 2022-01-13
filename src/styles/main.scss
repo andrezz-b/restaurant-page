@@ -1,32 +1,12 @@
-$fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
+@use "menu";
+@import "mixins";
 @import "reset.css";
+@import "variables";
+$fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
 // @import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
 // @import "~@fortawesome/fontawesome-free/scss/solid.scss";
 // @import "~@fortawesome/fontawesome-free/scss/brands.scss";
 // @import "~@fortawesome/fontawesome-free/scss/regular.scss";
-@import url("https://fonts.googleapis.com/css2?family=Crimson+Pro&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Work+Sans&display=swap");
-
-$font-title: "Crimson Pro", serif;
-$font-text: "Work Sans", sans-serif;
-
-$clr-bg-dk: #222831;
-$clr-bg-lt: #f2f2f2;
-
-$clr-base: lighten(#f96d00, 15%);
-$clr-ntrl: #fff;
-
-@mixin flexCenter($direction: row) {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: $direction;
-}
-
-@mixin background-opacity($color, $opacity: 0.3) {
-	background: $color;
-	background: rgba($color, $opacity);
-}
 
 html {
 	position: relative;
@@ -92,12 +72,6 @@ main {
 	padding: 2rem 0;
 }
 
-.highlight {
-	font-size: 1.3em;
-	color: $clr-base;
-	font-weight: 700;
-}
-
 .section {
 	@include flexCenter(column);
 	row-gap: 1rem;
@@ -112,7 +86,7 @@ main {
 	border-bottom: 1px solid $clr-base;
 }
 
-.container {
+.img-container {
 	@include flexCenter(row);
 	padding: 1.5em;
 	width: 100%;

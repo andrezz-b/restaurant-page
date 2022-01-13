@@ -1,11 +1,10 @@
 import "./styles/main.scss"
-import "./assets/images/meals.jpg"
-import "./assets/images/setting.jpg" 
 import { createHome } from "./scripts/home"
+import { createMenu } from "./scripts/menu"
 
 function createSite() {
     const divContent = document.getElementById("content");
-    divContent.appendChild(createHome());
+    divContent.appendChild(createMenu());
 }
 
 createSite();

@@ -1,3 +1,6 @@
+import "../assets/images/meals.jpg"
+import "../assets/images/setting.jpg" 
+
 export function createHome() {
     const main = document.createElement("main");
 
@@ -27,7 +30,7 @@ export function createHome() {
     return main;
 }
 
-function createTitle(text) {
+export function createTitle(text) {
 	const h1Title = document.createElement("h1");
 	h1Title.classList.add("title");
 
@@ -36,7 +39,7 @@ function createTitle(text) {
 	return h1Title;
 }
 
-function createImg(src) {
+export function createImg(src) {
 	const img = document.createElement("img");
 	img.src = src;
 
@@ -53,14 +56,14 @@ function createPar(text) {
 
 function createContainer(firstEl, secondEl) {
 	const div = document.createElement("div");
-	div.classList.add("container");
+	div.classList.add("img-container");
 
 	div.append(firstEl, secondEl);
 
 	return div;
 }
 
-function createSection() {
+export function createSection() {
 	const section = document.createElement("section");
 	section.classList.add("section");
 
