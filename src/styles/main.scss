@@ -27,6 +27,14 @@ html {
 	}
 }
 
+body {
+	display: flex;
+	position: relative;
+	min-height: 100vh;
+	flex-flow: column;
+	row-gap: 1rem
+}
+
 #content {
 	@include flexCenter(column);
 	justify-content: flex-start;
@@ -125,12 +133,13 @@ footer {
 	@include flexCenter();
 	@include background-opacity($clr-bg-dk, 0.9);
 
-	margin-top: 2rem;
+	margin-top: auto;
+	height: 40px;
+	width: 100%;
 	font-size: 1em;
 	font-family: $font-text;
 	padding: 0.5em;
 	color: $clr-ntrl;
-	width: 100%;
 
 	div {
 		@include flexCenter();
