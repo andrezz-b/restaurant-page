@@ -1,8 +1,8 @@
-import "../assets/images/meals.jpg"
-import "../assets/images/setting.jpg" 
+import "../assets/images/meals.jpg";
+import "../assets/images/setting.jpg";
 
 export function createHome() {
-    const main = document.createElement("main");
+	const main = document.createElement("main");
 
 	// First section
 	const imgSection = createSection();
@@ -21,13 +21,15 @@ export function createHome() {
 	// Second section
 	const textSection = createSection();
 	const textSectionTitle = createTitle("Come and have a taste");
-    const textSectionPar = createPar("Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident quis illo nulla quasi, mollitia laudantium.");
+	const textSectionPar = createPar(
+		"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident quis illo nulla quasi, mollitia laudantium."
+	);
 
-    textSection.append(textSectionTitle, textSectionPar);
+	textSection.append(textSectionTitle, textSectionPar);
 
-    main.append(imgSection, textSection);
+	main.append(imgSection, textSection);
 
-    return main;
+	return main;
 }
 
 export function createTitle(text) {
@@ -46,9 +48,9 @@ export function createImg(src) {
 	return img;
 }
 
-function createPar(text) {
+export function createPar(text) {
 	const par = document.createElement("p");
-    par.classList.add("par-large")
+	par.classList.add("par-large");
 	par.textContent = text;
 
 	return par;
@@ -69,4 +71,3 @@ export function createSection() {
 
 	return section;
 }
-

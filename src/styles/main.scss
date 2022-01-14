@@ -1,22 +1,22 @@
 @use "menu";
+@use "about.scss";
 @import "mixins";
 @import "reset.css";
 @import "variables";
+
 $fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
-// @import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
-// @import "~@fortawesome/fontawesome-free/scss/solid.scss";
-// @import "~@fortawesome/fontawesome-free/scss/brands.scss";
-// @import "~@fortawesome/fontawesome-free/scss/regular.scss";
+@import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "~@fortawesome/fontawesome-free/scss/brands.scss";
 
 html {
 	position: relative;
 
 	&::before {
-		background-image: url('../assets/images/bg-restaurant.jpg');
+		background-image: url("../assets/images/bg-restaurant.jpg");
 		background-repeat: no-repeat;
 		background-position: center top;
 		background-size: cover;
-		content: ' ';
+		content: " ";
 		height: 100%;
 		left: 0;
 		position: fixed;
@@ -41,7 +41,6 @@ nav {
 	border-bottom: 2px solid $clr-bg-dk;
 	width: 100%;
 	gap: 2rem;
-
 
 	button {
 		@include background-opacity($clr-bg-dk, 0);
@@ -81,7 +80,7 @@ main {
 .title {
 	font-size: 3em;
 	white-space: nowrap;
-	padding: .5rem;
+	padding: 0.5rem;
 	color: $clr-ntrl;
 	border-bottom: 1px solid $clr-base;
 }
@@ -91,7 +90,7 @@ main {
 	padding: 1.5em;
 	width: 100%;
 	row-gap: 3rem;
-	margin: .5rem 0;
+	margin: 0.5rem 0;
 
 	img {
 		border: 1px solid $clr-ntrl;
@@ -104,17 +103,16 @@ main {
 		white-space: normal;
 		flex: 1 0 75%;
 		font-size: 2em;
-		padding: .5em;
+		padding: 0.5em;
 	}
 
-	img:first-child  {
+	img:first-child {
 		margin-right: 6rem;
 	}
 
 	h1 + img {
 		margin-left: 6rem;
 	}
-
 }
 
 .par-large {
@@ -122,4 +120,3 @@ main {
 	font-size: 1.2em;
 	color: $clr-bg-lt;
 }
-

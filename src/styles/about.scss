@@ -1,0 +1,40 @@
+@import "variables";
+@import "mixins";
+
+.section.section--about {
+	width: 100%;
+}
+
+.wrapper {
+	@include flexCenter(row);
+	width: 100%;
+	justify-content: space-around;
+	margin-top: 2rem;
+
+	.subtitle {
+		color: $clr-ntrl;
+		font-size: 2em;
+		border-bottom: 1px solid $clr-base;
+		margin-bottom: 1rem;
+	}
+}
+
+.about-item {
+	display: flex;
+	flex-flow: column;
+	align-self: flex-start;
+	height: 90%;
+}
+
+.wrapper.wrapper--icon {
+	margin-top: 0;
+	align-items: flex-start;
+	justify-content: flex-start;
+	gap: 1.5rem;
+
+	.icon {
+		font-size: 2em;
+		color: $clr-ntrl;
+		cursor: pointer;
+	}
+}
