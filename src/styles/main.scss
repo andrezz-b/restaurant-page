@@ -120,3 +120,25 @@ main {
 	font-size: 1.2em;
 	color: $clr-bg-lt;
 }
+
+footer {
+	@include flexCenter();
+	@include background-opacity($clr-bg-dk, 0.9);
+
+	margin-top: 2rem;
+	font-size: 1em;
+	font-family: $font-text;
+	padding: 0.5em;
+	color: $clr-ntrl;
+	width: 100%;
+
+	div {
+		@include flexCenter();
+	}
+
+	.fa-github {
+		color: $clr-ntrl;
+		font-size: 1.5em;
+		padding: 0 0.5rem;
+	}
+}
